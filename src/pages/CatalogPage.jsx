@@ -11,14 +11,15 @@ export const CatalogPage = ({ onSelectGame, userLibrary = [] }) => {
   // Carga inicial del JSON
   useEffect(() => {
     fetch('/data/games.json')
-      ? fetch('/data/games.json')
-          .then((res) => res.json())
-          .then((data) => {
-            setGames(data);
-            setLoading(false);
-          })
-          .catch((err) => console.error('Error al cargar juegos:', err))
-      : setLoading(false);
+      .then((res) => res.json())
+      .then((data) => {
+        setGames(data);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error('Error al cargar juegos:', err);
+        setLoading(false);
+      });
   }, []);
 
   // Extraer géneros únicos
