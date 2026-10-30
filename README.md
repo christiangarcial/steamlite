@@ -26,6 +26,41 @@ npm run preview  # Previsualizar la build de producción
 npm run lint     # Ejecutar ESLint
 ```
 
+## Configuración de moneda y precios
+
+### Cambiar los precios de los juegos
+
+Los precios están en un único archivo: **`public/data/games.json`**, en el
+campo `price` de cada juego (y en `isFree` para los juegos gratuitos).
+
+```json
+{
+  "id": "pong-retro",
+  "price": 18.71,
+  "isFree": false
+}
+```
+
+### Cambiar la moneda
+
+La moneda se controla desde **`src/utils/format.js`**, en el objeto `CURRENCY`:
+
+```js
+export const CURRENCY = {
+  SOLES: true,        // true = soles peruanos (S/) · false = dólares ($)
+  code: 'PEN',
+  locale: 'es-PE',
+  symbol: 'S/',
+  taxLabel: 'IGV',    // IGV en Perú · IVA en otros países
+};
+```
+
+Con `SOLES: true` la app muestra `S/ 18.71` y usa IGV 18%. Con `SOLES: false`
+vuelve a `$18.71` e IVA 19%.
+
+Todos los precios de la interfaz pasan por `formatPrice()`, por lo que no hace
+faldo tocar ningún componente al cambiar de moneda.
+
 ## Estructura del proyecto
 
 ```

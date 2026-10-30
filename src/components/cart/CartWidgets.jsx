@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { formatPrice } from '../../utils/format';
+import { formatPrice, taxName } from '../../utils/format';
 
 export const CartItem = ({ game, onRemove }) => (
   <div
@@ -63,7 +63,7 @@ export const CartSummary = ({ totals, itemCount, children }) => (
 
     <Row label="Juegos" value={`${itemCount}`} />
     <Row label="Subtotal" value={formatPrice(totals.subtotal)} />
-    <Row label={`IVA (${Math.round(totals.taxRate * 100)}%)`} value={formatPrice(totals.tax)} />
+    <Row label={`${taxName} (${Math.round(totals.taxRate * 100)}%)`} value={formatPrice(totals.tax)} />
 
     <div
       style={{
