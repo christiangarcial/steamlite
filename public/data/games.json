@@ -1,46 +1,380 @@
-[
-  {
-    "id": "snake-retro",
-    "title": "Snake Classic",
-    "price": 0.00,
-    "genre": "Arcade",
-    "description": "El clásico juego de la serpiente desarrollado en HTML5 Canvas. Junta manzanas y evita chocar contra las paredes.",
-    "image": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=600",
-    "rating": 4.8,
-    "isFree": true,
-    "type": "canvas"
-  },
-  {
-    "id": "pong-retro",
-    "title": "Retro Pong 2D",
-    "price": 4.99,
-    "genre": "Arcade",
-    "description": "Enfréntate a la IA en este legendario simulador de tenis de mesa vintage.",
-    "image": "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&q=80&w=600",
-    "rating": 4.5,
-    "isFree": false,
-    "type": "canvas"
-  },
-  {
-    "id": "cyber-runner",
-    "title": "Cyber Runner 2077",
-    "price": 14.99,
-    "genre": "Acción",
-    "description": "Corre a través de la ciudad futurista evitando obstáculos a alta velocidad.",
-    "image": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=600",
-    "rating": 4.9,
-    "isFree": false,
-    "type": "external"
-  },
-  {
-    "id": "space-defense",
-    "title": "Space Defense",
-    "price": 9.99,
-    "genre": "Estrategia",
-    "description": "Protege tu base espacial de continuas oleadas de naves enemigas.",
-    "image": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=600",
-    "rating": 4.2,
-    "isFree": false,
-    "type": "external"
-  }
-]
+{
+  "categories": [
+    { "id": "all", "name": "Todos", "icon": "grid" },
+    { "id": "Arcade", "name": "Arcade", "icon": "gamepad" },
+    { "id": "Acción", "name": "Acción", "icon": "bolt" },
+    { "id": "Estrategia", "name": "Estrategia", "icon": "chess" },
+    { "id": "Puzzle", "name": "Puzzle", "icon": "puzzle" },
+    { "id": "Simulación", "name": "Simulación", "icon": "cube" },
+    { "id": "Deportivo", "name": "Deportivo", "icon": "ball" }
+  ],
+  "featured": ["cyber-runner", "snake-retro", "space-defense"],
+  "games": [
+    {
+      "id": "snake-retro",
+      "title": "Snake Classic",
+      "price": 0.00,
+      "genre": "Arcade",
+      "description": "El clásico juego de la serpiente desarrollado en HTML5 Canvas. Junta manzanas y evita chocar contra las paredes y contra tu propio cuerpo.",
+      "longDescription": "Snake Classic es la reimaginacion web del clasico que marco a toda una generacion. Controla la serpiente con las flechas del teclado, come las manzanas para crecer y no toques los bordes ni tu propio cuerpo. Cada manzana suma 10 puntos y la partida se acelera sola: el objetivo es simple y la dificultad es real.",
+      "image": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=600",
+      "banner": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=1600",
+      "screenshots": [
+        "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=800"
+      ],
+      "rating": 4.8,
+      "isFree": true,
+      "type": "canvas",
+      "featured": true,
+      "developer": "Pixel Forge",
+      "releaseDate": "2024-03-12",
+      "screens": "Teclado",
+      "tags": ["retro", "clasico", "un jugador"]
+    },
+    {
+      "id": "pong-retro",
+      "title": "Retro Pong 2D",
+      "price": 4.99,
+      "genre": "Arcade",
+      "description": "Enfréntate a la IA en este legendario simulador de tenis de mesa vintage.",
+      "longDescription": "Retro Pong 2D es un Pong de la era de las máquinas recreativas, con física arcade y una IA que aprende de tus jugadas. Mueve el ratón para controlar tu raqueta izquierda y devuelve la pelota con ángulo. El primer jugador que llegue a 11 puntos gana la partida.",
+      "image": "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&q=80&w=600",
+      "banner": "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&q=80&w=1600",
+      "screenshots": [
+        "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?auto=format&fit=crop&q=80&w=800"
+      ],
+      "rating": 4.5,
+      "isFree": false,
+      "type": "canvas",
+      "featured": true,
+      "developer": "Arcade Labs",
+      "releaseDate": "2024-06-01",
+      "screens": "Ratón",
+      "tags": ["retro", "ia", "un jugador"]
+    },
+    {
+      "id": "cyber-runner",
+      "title": "Cyber Runner 2077",
+      "price": 14.99,
+      "genre": "Acción",
+      "description": "Corre a través de la ciudad futurista evitando obstáculos a alta velocidad.",
+      "longDescription": "Cyber Runner 2077 te lanza por las calles neón de una megaciudad del año 2077. Esquivar trafficas, saltando temporaryes y bordeando el vacío entre rascacielos. Cuanto más corres, más puntos acumulas, pero también más riesgo asumes en cada salto.",
+      "image": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=600",
+      "banner": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=1600",
+      "screenshots": [
+        "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?auto=format&fit=crop&q=80&w=800"
+      ],
+      "rating": 4.9,
+      "isFree": false,
+      "type": "external",
+      "featured": true,
+      "developer": "Neon Studios",
+      "releaseDate": "2024-11-20",
+      "screens": "Teclado",
+      "tags": ["endless", "cyberpunk", "arcade"]
+    },
+    {
+      "id": "space-defense",
+      "title": "Space Defense",
+      "price": 9.99,
+      "genre": "Estrategia",
+      "description": "Protege tu base espacial de continuas oleadas de naves enemigas.",
+      "longDescription": "Eres el último torreón de una base orbital abandonada. Coloca torretas, calibra el escudo y sobrevive a oleadas cada vez más numerosas. Cada ronda superada desbloquea mejoras y multiplicadores de puntuación.",
+      "image": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=600",
+      "banner": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=1600",
+      "screenshots": [
+        "https://images.unsplash.com/photo-1446776877081-d282a0f896e2?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1502134249126-9f3755a50d78?auto=format&fit=crop&q=80&w=800"
+      ],
+      "rating": 4.2,
+      "isFree": false,
+      "type": "external",
+      "featured": true,
+      "developer": "Orbital Games",
+      "releaseDate": "2024-09-05",
+      "screens": "Ratón",
+      "tags": ["tower-defense", "sci-fi", "estrategia"]
+    },
+    {
+      "id": "brick-breaker",
+      "title": "Brick Breaker X",
+      "price": 2.99,
+      "genre": "Arcade",
+      "description": "Rompe ladrillos a toda velocidad en un juego de bloques con potenciadores.",
+      "longDescription": "Brick Breaker X es un clon del clásico con twists: cada partida genera patrones de ladrillos nuevos, hay bolas multibola, ladrillos indestructibles y un sistema de combos que multiplica la puntuación.",
+      "image": "https://images.unsplash.com/photo-1598550476439-6847785fcea6?auto=format&fit=crop&q=80&w=600",
+      "banner": "https://images.unsplash.com/photo-1598550476439-6847785fcea6?auto=format&fit=crop&q=80&w=1600",
+      "screenshots": [
+        "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?auto=format&fit=crop&q=80&w=800"
+      ],
+      "rating": 4.4,
+      "isFree": false,
+      "type": "canvas",
+      "featured": false,
+      "developer": "Pixel Forge",
+      "releaseDate": "2024-05-18",
+      "screens": "Ratón",
+      "tags": ["clasico", "reflexion", "arcade"]
+    },
+    {
+      "id": "neon-grid",
+      "title": "Neon Grid",
+      "price": 0.00,
+      "genre": "Puzzle",
+      "description": "Resuelve laberintos de luz en una cuadrícula neón que cambia en tiempo real.",
+      "longDescription": "Neon Grid es un rompecabezas de lógica pura. Ilumina todos los nodos de la cuadrícula sin usar dos colores adyacentes en la misma fila o columna. Los niveles están generados algorítmicamente para que nunca se repitan.",
+      "image": "https://images.unsplash.com/photo-1614850523296-d8c1af93d400?auto=format&fit=crop&q=80&w=600",
+      "banner": "https://images.unsplash.com/photo-1614850523296-d8c1af93d400?auto=format&fit=crop&q=80&w=1600",
+      "screenshots": [
+        "https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1502134249126-9f3755a50d78?auto=format&fit=crop&q=80&w=800"
+      ],
+      "rating": 4.6,
+      "isFree": true,
+      "type": "canvas",
+      "featured": false,
+      "developer": "Lumen Works",
+      "releaseDate": "2024-01-30",
+      "screens": "Ratón",
+      "tags": ["logica", "relajante", "niveles"]
+    },
+    {
+      "id": "tower-tactics",
+      "title": "Tower Tactics",
+      "price": 12.49,
+      "genre": "Estrategia",
+      "description": "Construye y mejora tu base con un sistema de construcción por rejilla.",
+      "longDescription": "Tower Tactics es unconstructor de bases por turnos. Levanta torres, mejora su alcance, abre rutas y expande tu perimeter antes de que la oleada nocturna llegue. Cada decisión tiene coste en recursos.",
+      "image": "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&q=80&w=600",
+      "banner": "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&q=80&w=1600",
+      "screenshots": [
+        "https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=800"
+      ],
+      "rating": 4.3,
+      "isFree": false,
+      "type": "external",
+      "featured": false,
+      "developer": "Bauhaus Digital",
+      "releaseDate": "2024-08-22",
+      "screens": "Ratón",
+      "tags": ["construccion", "turnos", "estrategia"]
+    },
+    {
+      "id": "turbo-rally",
+      "title": "Turbo Rally",
+      "price": 7.99,
+      "genre": "Deportivo",
+      "description": "Corre por circuitos de asfalto con fisica arcade y decimas al milisegundo.",
+      "longDescription": "Turbo Rally simula la sensación de un rally: derrapes, tromos, curvas ciegas y oponentes que frenan tarde. El cronómetro por sector te dirá dónde pierdes tiempo y cuánto puedes ganar con una trayectoria más limpia.",
+      "image": "https://images.unsplash.com/photo-1511882150382-421056c89033?auto=format&fit=crop&q=80&w=600",
+      "banner": "https://images.unsplash.com/photo-1511882150382-421056c89033?auto=format&fit=crop&q=80&w=1600",
+      "screenshots": [
+        "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80&w=800"
+      ],
+      "rating": 4.1,
+      "isFree": false,
+      "type": "external",
+      "featured": false,
+      "developer": "Redline Collective",
+      "releaseDate": "2024-07-09",
+      "screens": "Teclado",
+      "tags": ["carreras", "arcade", "temporizador"]
+    },
+    {
+      "id": "pixel-racer",
+      "title": "Pixel Racer '89",
+      "price": 3.99,
+      "genre": "Deportivo",
+      "description": "Carreras pixel art de 8 bits con splitting y rebotes arcade.",
+      "longDescription": "Pixel Racer '89 revive las maquinas recreativas de los 80 con graficos de 8 bits, splitting, derrapes imposibles y ocho circuitos originales disenados para esta demo.",
+      "image": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&q=80&w=600",
+      "banner": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&q=80&w=1600",
+      "screenshots": [
+        "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1511882150382-421056c89033?auto=format&fit=crop&q=80&w=800"
+      ],
+      "rating": 4.7,
+      "isFree": false,
+      "type": "canvas",
+      "featured": false,
+      "developer": "8bit Supply",
+      "releaseDate": "2023-12-15",
+      "screens": "Teclado",
+      "tags": ["8bit", "carreras", "pixel-art"]
+    },
+    {
+      "id": "farm-frenzy",
+      "title": "Farm Frenzy",
+      "price": 5.49,
+      "genre": "Simulación",
+      "description": "Gestiona tu granja, cultiva, produce y expande en un simulador relajante.",
+      "longDescription": "Farm Frenzy es un simulador de gestión agrícola. Planta, riega, cosecha y vende en el mercado local, invirtiendo tus beneficios en mejoras de la granja. Cada estación trae una cosecha distinta y nuevos pedidos de los vecinos.",
+      "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=600",
+      "banner": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=1600",
+      "screenshots": [
+        "https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=800"
+      ],
+      "rating": 4.0,
+      "isFree": false,
+      "type": "external",
+      "featured": false,
+      "developer": "Sunny Fields",
+      "releaseDate": "2024-04-02",
+      "screens": "Ratón",
+      "tags": ["gestion", "relajante", "simulacion"]
+    },
+    {
+      "id": "block-buster",
+      "title": "Block Buster",
+      "price": 1.99,
+      "genre": "Puzzle",
+      "description": "Encaja piezas que caen en un laberinto de bloques por gravity.",
+      "longDescription": "Block Buster es un rompecabezas de bloques con gravedad. Las piezas caen, se apilan y debes completar líneas para que desaparezcan. Cada partida tiene un tablero diferente y el ritmo se acelera en cada nivel superado.",
+      "image": "https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?auto=format&fit=crop&q=80&w=600",
+      "banner": "https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?auto=format&fit=crop&q=80&w=1600",
+      "screenshots": [
+        "https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1614850523296-d8c1af93d400?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1502134249126-9f3755a50d78?auto=format&fit=crop&q=80&w=800"
+      ],
+      "rating": 4.2,
+      "isFree": false,
+      "type": "canvas",
+      "featured": false,
+      "developer": "Lumen Works",
+      "releaseDate": "2024-02-27",
+      "screens": "Teclado",
+      "tags": ["bloques", "reflexion", "arcade"]
+    },
+    {
+      "id": "hyper-carrier",
+      "title": "Hyper Carrier",
+      "price": 15.99,
+      "genre": "Acción",
+      "description": "Pilota un caza supersónico a través de cielos hostiles.",
+      "longDescription": "Hyper Carrier es un simulador de vuelo arcade de la era turbo. Gestiona la energia de tu motor, entra en las nubes y dispara a los enemigos antes de que el radar te localice.",
+      "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&q=80&w=600",
+      "banner": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&q=80&w=1600",
+      "screenshots": [
+        "https://images.unsplash.com/photo-1474302770737-173ee21bab63?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1446776877081-d282a0f896e2?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800"
+      ],
+      "rating": 4.5,
+      "isFree": false,
+      "type": "external",
+      "featured": false,
+      "developer": "Neon Studios",
+      "releaseDate": "2024-10-11",
+      "screens": "Teclado",
+      "tags": ["volar", "arcade", "velocidad"]
+    },
+    {
+      "id": "cafe-manager",
+      "title": "Café Manager",
+      "price": 6.99,
+      "genre": "Simulación",
+      "description": "Atiende tu café, optimiza rutas y satisface a los clientes.",
+      "longDescription": "Café Manager es un simulador de gestión con turnos por hora. Coloca mesas, asigna camareros y ajusta el menú para maximizar la satisfaction de los clientes sin descuidar la caja.",
+      "image": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=600",
+      "banner": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=1600",
+      "screenshots": [
+        "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&q=80&w=800"
+      ],
+      "rating": 4.3,
+      "isFree": false,
+      "type": "external",
+      "featured": false,
+      "developer": "Cozy Loop",
+      "releaseDate": "2024-05-30",
+      "screens": "Ratón",
+      "tags": ["gestion", "relajante", "negocio"]
+    }
+  ],
+  "reviews": [
+    {
+      "id": "r1",
+      "gameId": "snake-retro",
+      "user": "RetroFan",
+      "rating": 5,
+      "date": "2025-01-14",
+      "content": "El snake más fluido que he jugado en el navegador. Los controles responden al instante y el game over llega justo cuando te lo esperas."
+    },
+    {
+      "id": "r2",
+      "gameId": "snake-retro",
+      "user": "CanvasQueen",
+      "rating": 4,
+      "date": "2025-02-02",
+      "content": "Buen juego, le faltaría un botón de reinicio para no tener que recargar la página, pero el canvas renderiza muy limpio."
+    },
+    {
+      "id": "r3",
+      "gameId": "pong-retro",
+      "user": "MesaDePin",
+      "rating": 4,
+      "date": "2025-01-28",
+      "content": "La IA se adapta un poco, se nota que aprende. Requiere ratón, así que en móvil no funciona, pero en PC es un placer."
+    },
+    {
+      "id": "r4",
+      "gameId": "cyber-runner",
+      "user": "NeonNinja",
+      "rating": 5,
+      "date": "2025-03-05",
+      "content": "El ambiente cyberpunk es brutal. La demo animada te deja con ganas de más, ojalá liberen la versión completa."
+    },
+    {
+      "id": "r5",
+      "gameId": "space-defense",
+      "user": "Tactico",
+      "rating": 4,
+      "date": "2025-02-19",
+      "content": "Muy bueno lo de las oleadas, la dificultad escala bien. Se echa en falta poder elegir torreta antes de la oleada."
+    },
+    {
+      "id": "r6",
+      "gameId": "neon-grid",
+      "user": "LogicaPura",
+      "rating": 5,
+      "date": "2025-01-09",
+      "content": "Perfecto para descansar. Los niveles generados son muy buenos y nunca se repiten."
+    },
+    {
+      "id": "r7",
+      "gameId": "brick-breaker",
+      "user": "Rebote",
+      "rating": 4,
+      "date": "2025-03-11",
+      "content": "Los combos son divertido, te engancha rápido. El ratón se siente algo impreciso a veces."
+    },
+    {
+      "id": "r8",
+      "gameId": "pixel-racer",
+      "user": "OchoBits",
+      "rating": 5,
+      "date": "2025-02-26",
+      "content": "El pixel art es una delicia y los circuitos están muy bien diseñados. Añadir más pistas sería el continuación."
+    }
+  ]
+}
+

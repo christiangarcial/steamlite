@@ -1,10 +1,12 @@
 :root {
-  font-family: 'Segoe UI', system-ui, -apple-system, Arial, sans-serif;
+  font-family: 'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
   color-scheme: dark;
   background-color: #0e1116;
   color: #c6d4df;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 * {
@@ -35,4 +37,121 @@ h1,
 h2,
 h3 {
   color: #ffffff;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Evita que el Navbar fijo tape el inicio de una seccion al hacer scroll */
+section[id],
+[id] {
+  scroll-margin-top: 90px;
+}
+
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+input::placeholder {
+  color: #6e7c8c;
+}
+
+/* Enfoque accesible para teclado */
+:focus-visible {
+  outline: 2px solid #66c0f4;
+  outline-offset: 2px;
+}
+
+/* Scrollbar del carrusel */
+.game-carousel-track::-webkit-scrollbar {
+  height: 8px;
+}
+
+.game-carousel-track::-webkit-scrollbar-track {
+  background: #16202c;
+  border-radius: 999px;
+}
+
+.game-carousel-track::-webkit-scrollbar-thumb {
+  background: #2a475e;
+  border-radius: 999px;
+}
+
+.game-carousel-track::-webkit-scrollbar-thumb:hover {
+  background: #3a5f7d;
+}
+
+@keyframes steamlite-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ---------------------------------------------------------------- */
+/* Responsive: el enunciado pide una interfaz adaptable a movil      */
+/* ---------------------------------------------------------------- */
+
+@media (max-width: 900px) {
+  /* El Navbar colapsa en un menu desplegable */
+  .navbar-toggle {
+    display: inline-block !important;
+  }
+
+  .navbar-mobile-menu {
+    display: flex !important;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .navbar-mobile-menu a {
+    display: block;
+  }
+
+  /* Los enlaces de navegacion se ocultan (estan en el menu movil) */
+  .navbar-links {
+    display: none !important;
+  }
+
+  /* El Navbar queda en una sola fila compacta */
+  .navbar-inner {
+    flex-wrap: nowrap !important;
+    gap: 0.75rem !important;
+    padding: 0.65rem 1rem !important;
+  }
+
+  .navbar-actions {
+    margin-left: auto;
+    gap: 0.5rem !important;
+  }
+
+  /* El contador de biblioteca se oculta para ganar espacio */
+  .navbar-library-count {
+    display: none;
+  }
+
+  /* Paginas con dos columnas pasan a una sola */
+  .page-two-columns {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* La tabla del carrito se reorganiza en vertical */
+  .cart-item {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 600px) {
+  .game-carousel-track > * {
+    min-width: 200px !important;
+    max-width: 200px !important;
+    flex-basis: 200px !important;
+  }
+
+  /* El logotipo se reduce en pantallas pequenas */
+  .navbar-inner > a {
+    font-size: 1.15rem !important;
+  }
 }

@@ -1,52 +1,36 @@
-import { useState } from 'react';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import { StoreProvider } from './context/StoreContext';
+import { Navbar } from './components/layout/Navbar';
+import { Footer } from './components/layout/Footer';
 import { CatalogPage } from './pages/CatalogPage';
-import { SnakeGame } from './games/SnakeGame';
-import { PongGame } from './games/PongGame';
+import { GameDetailPage } from './pages/GameDetailPage';
+import { CartPage } from './pages/CartPage';
+import { LibraryPage } from './pages/LibraryPage';
+import PlayPage from './pages/PlayPage';
+import { NotFoundPage } from './pages/NotFoundPage';
 
-const GAME_COMPONENTS = {
-  'snake-retro': SnakeGame,
-  'pong-retro': PongGame,
-};
+export const App = () => (
+  <BrowserRouter>
+    <StoreProvider>
+      <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+        <Navbar />
 
-const App = () => {
-  const [selectedGameId, setSelectedGameId] = useState(null);
-  const [userLibrary, setUserLibrary] = useState([]);
+        <main style={{ flex: 1 }}>
+          <Routes>
+            <Route path="/" element={<CatalogPage />} />
+            <Route path="/game/:id" element={<GameDetailPage />} />
+            <Route path="/cart" element={<CartPage />} />
+            <Route path="/library" element={<LibraryPage />} />
+            <Route path="/play/:id" element={<PlayPage />} />
+            <Route path="/inicio" element={<Navigate to="/" replace />} />
+            <Route path="*" element={<NotFoundPage />} />
+          </Routes>
+        </main>
 
-  const ActiveGame = selectedGameId ? GAME_COMPONENTS[selectedGameId] : null;
-
-  const handleSelectGame = (gameId) => {
-    setSelectedGameId(gameId);
-    setUserLibrary((prev) =>
-      prev.includes(gameId) ? prev : [...prev, gameId]
-    );
-  };
-
-  const handleBack = () => setSelectedGameId(null);
-
-  if (ActiveGame) {
-    return (
-      <div style={{ padding: '2rem', maxWidth: '1200px', margin: '0 auto' }}>
-        <button
-          onClick={handleBack}
-          style={{
-            marginBottom: '1.5rem',
-            padding: '0.5rem 1rem',
-            backgroundColor: '#2a475e',
-            color: '#fff',
-            border: 'none',
-            borderRadius: '4px',
-            cursor: 'pointer',
-            fontWeight: 'bold',
-          }}
-        >
-          Volver al catálogo
-        </button>
-        <ActiveGame />
+        <Footer />
       </div>
-    );
-  }
-
-  return <CatalogPage onSelectGame={handleSelectGame} userLibrary={userLibrary} />;
-};
+    </StoreProvider>
+  </BrowserRouter>
+);
 
 export default App;

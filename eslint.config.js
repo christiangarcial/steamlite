@@ -36,7 +36,12 @@ export default [
       ],
       'react-refresh/only-export-components': [
         'warn',
-        { allowConstantExport: true },
+        {
+          allowConstantExport: true,
+          // Los archivos de Context_provider_exportan un componente y sus hooks
+          // por diseño (patron estandar de React).
+          allowExportNames: ['useStore', 'useCart', 'useLibrary'],
+        },
       ],
     },
   },
